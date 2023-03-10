@@ -1,158 +1,92 @@
-@font-face {
-    font-family: 'RampartOne';
-    src: url(ReenieBeanie-Regular.ttf);
-}
+<!DOCTYPE html>
 
-* {
-    margin: 0;
-}
+<head>
+    <link rel="stylesheet" href="css/style.css">
 
-/* --nav ---------------------------------------*/
-#navContainer {
-    text-decoration: none;
-    float: left;
-}
+    <!--Hero Text Font Import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!---->
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
 
-/*Get rid of the display none later */
-.navText {
-    display: none;
-    text-decoration: none;
-    color: #524f42;
-    list-style-type: none;
-}
+</head>
 
-#navColor {
-    position: fixed;
-    background: #FFEACC;
-    top: 0px;
-    left: 0vh;
-    width: 110vh;
-    height: 10vh;
-    z-index: 1;
-}
+<body>
+    <div id="preLoader"></div>
 
-#titleCard {
-    position: fixed;
-    width: 30vh;
-    height: 20vh;
-    z-index: 2;
-}
+    <img src="css/pictures/titleCardAlt.png" id="titleCard">
 
-#dropdownMenu {
-    position: fixed;
-    top: 1vh;
-    right: 4vh;
-    transform: scaleX(-1);
-    width: 6vh;
-    height: 6vh;
-    z-index: 2;
-}
+    <!-- Navigation here -->
+    <header>
+        <div id="navColor"></div>
+        <img src="css/pictures/dropdownMenu.png" id="dropdownMenu">
+        <ul id="navContainer">
 
-/*--Hero Background---------------------------------------*/
+            <a href="google.com" class="navText">
+                <li>What I Can Do</li>
+            </a>
 
-#cottageBackground {
-    margin-left: 0vh;
-    margin-top: -10vh;
-    width: 100vh;
-    height: 250vh;
-}
+            <a href="google.com" class="navText">
+                <li>About Me</li>
+            </a>
 
-#heroHeaderText {
-    position: absolute;
-    top: 50vh;
-    left: 24vh;
-    text-align: center;
-    font-size: 15em;
-    font-family: RampartOne;
-    color: white;
-}
+            <a href="google.com" class="navText">
+                <li>Projects</li>
+            </a>
 
-#downArrow {
-    position: absolute;
-    top: 150vh;
-    left: 45vh;
-    width: 10vh;
-    height: 10vh;
-    animation: updown 2s ease infinite;
-}
+            <a href="google.com" class="navText">
+                <li>Resume</li>
+            </a>
+        </ul>
 
-@keyframes updown {
-    0% {
-        transform: translateY(-50%);
-    }
+        <!--
+        <img src="css/pictures/bush1.png" class="nav" id="bush1">
+        <img src="css/pictures/bush2.png" class="nav" id="bush2">
 
-    50% {
-        transform: translateY(50%);
-    }
+        -->
+    </header>
 
-    100% {
-        transform: translateY(-50%);
-    }
-}
+    <!-- Body Section -->
+    <section>
+
+        <article>
+            <img src="css/pictures/cottageBackgroundMobile.png" id="cottageBackground">
+            <h1 id="heroHeaderText">Chris Yurga</h1>
+            <img src="css/pictures/downArrow.png" id="downArrow">
+        </article>
+
+        <article>
+            <img src="css/pictures/paperBG2.png" id="canDo">
+        </article>
 
 
-/*--What I can do section----------------------------------*/
-#canDo {
-    margin-top: 20vh;
-    width: 100vh;
-    height: 75vh;
-}
+        <article>
+            <img src="css/pictures/plantMe.png" id="portrait">
+        </article>
 
-/*--About Me-----------------------------------------------*/
+        <article id="aboutMeContainer">
+            <h1 id="aboutMeHeader">About me</h1>
+            <p id="aboutMeText">Hi, my name is chris Yurga, I'm an artist, programmer, and plant enthusiast and I want
+                to tell YOUR story. Lets talk and find a way to breathe life into that idea of yours</p>
+            <button id="aboutMeContactBtn">Contact Me </button>
 
-#portrait {
-    margin-top: 10vh;
-    width: 80vh;
-    height: 90vh;
-}
+        </article>
 
-#aboutMeContainer {
-    position: absolute;
-    border-radius: 15px;
-    padding: 3vh;
-    left: 55vh;
-    top: 360vh;
-    background-color: rgb(255, 247, 239);
-    height: 50vh;
-    width: 35vh;
-}
+        <article>
+            <img src="css/pictures/projects.jpg" id="projectHeader">
+            <div id="projects">
+                <img src="css/pictures/card.png" id="projectCard">
+                <img src="css/pictures/card.png" id="projectCard">
+                <img src="css/pictures/card.png" id="projectCard">
 
-#aboutMeHeader {
-    font-family: consolas;
-    font-size: 2.5em;
-    color: #372f26;
-}
 
-#aboutMeText {
-    font-family: consolas;
-    font-size: 1.6em;
-    color: #372f26;
-    padding: 2vh;
+            </div>
+        </article>
 
-}
 
-#aboutMeContactBtn {
-    background-color: #827c5c;
-    font-family: consolas;
-    font-size: 1.5em;
-    color: #ffffff;
-    float: right;
-    padding: 2vh;
-    border-radius: 2vh;
-}
 
-/*--Project Section-----------------------------------------------*/
+    </section>
 
-#projectHeader {
-    margin-top: 20vh;
-    margin-left: 10vh;
-    height: 30vh;
-    width: 80vh;
-}
-
-#projectCard {
-    height: 60vh;
-    width: 80vh;
-    margin-top: 10vh;
-    margin-left: 10vh;
-}
+    <!-- Body Section 2 -->
+</body>
