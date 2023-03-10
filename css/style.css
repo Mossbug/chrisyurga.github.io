@@ -125,15 +125,17 @@
 
 #aboutMeText {
     font-family: consolas;
-    font-size: 1.95em;
+    font-size: 1.6em;
     color: #372f26;
+    padding: 2vh;
+
 }
 
 #aboutMeContactBtn {
     background-color: #827c5c;
     font-family: consolas;
     font-size: 1.5em;
-    color: #372f26;
+    color: #ffffff;
     float: right;
     padding: 2vh;
     border-radius: 2vh;
@@ -146,4 +148,11 @@
     margin-left: 10vh;
     height: 30vh;
     width: 80vh;
+}
+
+#projectCard {
+    height: 60vh;
+    width: 80vh;
+    margin-top: 10vh;
+    margin-left: 10vh;
 }
