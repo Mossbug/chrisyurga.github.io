@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'RampartOne';
+    src: url(ReenieBeanie-Regular.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+/* --nav ---------------------------------------*/
+#navContainer {
+    text-decoration: none;
+    float: left;
+}
+
+/*Get rid of the display none later */
+.navText {
+    display: none;
+    text-decoration: none;
+    color: #524f42;
+    list-style-type: none;
+}
+
+#navColor {
+    position: fixed;
+    background: #FFEACC;
+    top: 0px;
+    left: 0vh;
+    width: 110vh;
+    height: 10vh;
+    z-index: 1;
+}
+
+#titleCard {
+    position: fixed;
+    width: 30vh;
+    height: 20vh;
+    z-index: 2;
+}
+
+#dropdownMenu {
+    position: fixed;
+    top: 1vh;
+    right: 4vh;
+    transform: scaleX(-1);
+    width: 6vh;
+    height: 6vh;
+    z-index: 2;
+}
+
+/*--Hero Background---------------------------------------*/
+
+#cottageBackground {
+    margin-left: 0vh;
+    margin-top: -10vh;
+    width: 100vh;
+    height: 250vh;
+}
+
+#heroHeaderText {
+    position: absolute;
+    top: 50vh;
+    left: 24vh;
+    text-align: center;
+    font-size: 15em;
+    font-family: RampartOne;
+    color: white;
+}
+
+#downArrow {
+    position: absolute;
+    top: 150vh;
+    left: 45vh;
+    width: 10vh;
+    height: 10vh;
+    animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+
+/*--What I can do section----------------------------------*/
+#canDo {
+    margin-top: 20vh;
+    width: 100vh;
+    height: 75vh;
+}
+
+/*--About Me-----------------------------------------------*/
+
+#portrait {
+    margin-top: 10vh;
+    width: 80vh;
+    height: 90vh;
+}
+
+#aboutMeContainer {
+    position: absolute;
+    border-radius: 15px;
+    padding: 3vh;
+    left: 55vh;
+    top: 360vh;
+    background-color: rgb(255, 247, 239);
+    height: 50vh;
+    width: 35vh;
+}
+
+#aboutMeHeader {
+    font-family: consolas;
+    font-size: 2.5em;
+    color: #372f26;
+}
+
+#aboutMeText {
+    font-family: consolas;
+    font-size: 1.95em;
+    color: #372f26;
+}
+
+#aboutMeContactBtn {
+    background-color: #827c5c;
+    font-family: consolas;
+    font-size: 1.5em;
+    color: #372f26;
+    float: right;
+    padding: 2vh;
+    border-radius: 2vh;
+}
+
+/*--Project Section-----------------------------------------------*/
+
+#projectHeader {
+    margin-top: 20vh;
+    margin-left: 10vh;
+    height: 30vh;
+    width: 80vh;
+}
