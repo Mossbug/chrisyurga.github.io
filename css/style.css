@@ -31,52 +31,51 @@ Get rid of the display none later ---------
     top: 0px;
     left: 0vh;
     width: 99vh;
-    height: 12vh;
+    height: 8vh;
     z-index: 1;
 }
 
 #titleCard {
     position: fixed;
-    width: 30vh;
-    height: 20vh;
+    width: 19vh;
+    height: 14vh;
     z-index: 2;
 }
 
 #dropdownMenu {
     position: fixed;
     top: 1vh;
-    right: 4vh;
+    right: 2vh;
     transform: scaleX(-1);
-    width: 8vh;
-    height: 8vh;
+    width: 6vh;
+    height: 6vh;
     z-index: 2;
 }
 
 /*--Hero Background---------------------------------------*/
 
 #cottageBackground {
-    margin-top: 0vh;
-    width: 99vh;
-    height: 250vh;
+    margin-top: -2vh;
+    width: 100%;
+    height: 100vh;
 }
 
 #heroHeaderText {
     position: absolute;
-    top: 50vh;
-    left: 18vh;
-    right: 50%;
+    top: 25vh;
+    left: 1vh;
     text-align: center;
-    font-size: 15em;
+    font-size: 8em;
     font-family: RampartOne;
     color: white;
 }
 
 #downArrow {
     position: absolute;
-    top: 150vh;
-    left: 45vh;
-    width: 10vh;
-    height: 10vh;
+    top: 78vh;
+    left: 22vh;
+    width: 5vh;
+    height: 5vh;
     animation: updown 2s ease infinite;
 }
 
@@ -97,66 +96,67 @@ Get rid of the display none later ---------
 
 /*--What I can do section----------------------------------*/
 #canDo {
-    margin-top: 20vh;
-    width: 99vh;
-    height: 75vh;
+    margin-top: 10vh;
+    width: 100%;
+    height: 50%;
 }
 
 /*--About Me-----------------------------------------------*/
 
 #portrait {
-    margin-top: 10vh;
-    width: 80vh;
-    height: 90vh;
+    margin-top: 5vh;
+    width: 70%;
+    height: 70%;
 }
 
 #aboutMeContainer {
     position: absolute;
     border-radius: 15px;
-    padding: 3vh;
-    left: 55vh;
-    top: 360vh;
+    left: 53%;
+    top: 165vh;
+    height: 10em;
+    width: 35%;
+    padding: 2vh;
     background-color: rgb(255, 247, 239);
-    height: 20em;
-    width: 35vh;
 }
 
 #aboutMeHeader {
     font-family: consolas;
-    font-size: 2.3em;
+    font-size: 1em;
     color: #372f26;
 }
 
 #aboutMeText {
     font-family: consolas;
-    font-size: 1.25em;
+    font-size: 0.6em;
     color: #372f26;
-    padding: 2vh;
-
+    padding: 1vh;
 }
 
 #aboutMeContactBtn {
     background-color: #827c5c;
     font-family: consolas;
-    font-size: 1.5em;
+    font-size: 0.7em;
+    height: 4vh;
+    width: 12vh;
     color: #ffffff;
     float: right;
-    padding: 2vh;
+    padding: 0.5vh;
     border-radius: 2vh;
 }
 
 /*--Project Section-----------------------------------------------*/
 
 #projectHeader {
-    margin-top: 20vh;
-    margin-left: 10vh;
-    height: 30vh;
-    width: 80vh;
+    margin-top: 10vh;
+    margin-left: 5vh;
+    height: 20%;
+    width: 80%;
 }
 
 #projectCard {
-    height: 50vh;
-    width: 70vh;
+    height: 60%;
+    width: 80%;
     margin-top: 10vh;
-    margin-left: 15vh;
+    margin-left: 5vh;
 }
