@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <link rel="stylesheet" href="css/style.css">
@@ -10,34 +11,38 @@
     <!---->
     <meta name="viewport" content="width = device-width, initial-scale = 1">
 
+    <!--Swiper Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <div id="preLoader"></div>
+    <div id="preloader"></div>
 
+    <div id="backgroundDimmer"></div>
     <img src="css/pictures/titleCardAlt.png" id="titleCard">
 
     <!-- Navigation here -->
     <header>
         <div id="navColor"></div>
-        <img src="css/pictures/dropdownMenu.png" id="dropdownMenu">
+        <img src="css/pictures/dropdownMenu.png" id="dropDownBtn">
+        <img src="css/pictures/exit.png" id="exitBtn">
         <ul id="navContainer">
 
-            <a href="google.com" class="navText">
-                <li>What I Can Do</li>
-            </a>
 
-            <a href="google.com" class="navText">
-                <li>About Me</li>
-            </a>
+            <li id="canDoContainer"><a href="#canDo" class="navText">What I Can Do</a></li>
 
-            <a href="google.com" class="navText">
-                <li>Projects</li>
-            </a>
 
-            <a href="google.com" class="navText">
-                <li>Resume</li>
-            </a>
+
+            <li id="aboutMeContainer2"> <a href="#aboutMeContainer" class="navText">About Me</a></li>
+
+
+
+            <li id="projectHeaderContainer"><a href="#projectHeader" class="navText">Projects</a></li>
+
+
+
+            <li id="resumeContainer"><a href="google.com" class="navText">Resume</a></li>
+
         </ul>
 
         <!--
@@ -53,7 +58,8 @@
         <article>
             <img src="css/pictures/cottageBackgroundMobile.png" id="cottageBackground">
             <h1 id="heroHeaderText">Chris Yurga</h1>
-            <img src="css/pictures/downArrow.png" id="downArrow">
+            <a href="#canDo"><img src=" css/pictures/downArrow.png" id="downArrow"></a>
+
         </article>
 
         <article>
@@ -76,9 +82,47 @@
         <article>
             <img src="css/pictures/projects.jpg" id="projectHeader">
             <div id="projects">
-                <img src="css/pictures/card.png" id="projectCard">
-                <img src="css/pictures/card.png" id="projectCard">
-                <img src="css/pictures/card.png" id="projectCard">
+
+                <!-- PROJECT #1-------------------------------------------------------------------->
+                <img src="css/pictures/card.png" class="projectCard" id="projectCard1">
+                <div class="projectInfoContainer" id="project1">
+                    <h1 class="projectInfoHeader">Title here</h1>
+                    <img src="css/pictures/exit.png" id="closeProject1Btn">
+                    <p class="projectInfoText">My role: <br> designer & developer</p>
+                    <p class="projectInfoText">This project was made to be a demonstation of my skills in web
+                        development, and was designed so that it could act as a sort of repository for all of my future
+                        projects</p>
+
+                    <!-- SWIPER BEGIN -------->
+                    <div class="swiperContainer">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img src="css/pictures/bush1.png"></div>
+                                <div class="swiper-slide"><img src="css/pictures/bush2.png"></div>
+                                <div class="swiper-slide"><img src="css/pictures/plantMe.png"></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                        </div>
+                    </div>
+                    <!-- SWIPER END -------->
+
+                </div>
+
+                <!-- PROJECT #2-------------------------------------------------------------------->
+
+                <img src="css/pictures/card.png" class="projectCard" id="projectCard2">
+
+                <!-- PROJECT #3-------------------------------------------------------------------->
+
+                <img src="css/pictures/card.png" class="projectCard">
 
 
             </div>
@@ -89,4 +133,8 @@
     </section>
 
     <!-- Body Section 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
+<script src="new.js"></script>
+
+</html>
