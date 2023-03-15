@@ -1,158 +1,453 @@
-navContainer.classList.add("fadeOut");
-exitBtn.classList.add("noDisplay");
+@font-face {
+    font-family: 'RampartOne';
+    src: url(ReenieBeanie-Regular.ttf);
+}
+
+* {
+    margin: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#backgroundDimmer {
+    position: fixed;
+    top: 0vh;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(72, 75, 66);
+    opacity: 0.9;
+    z-index: 2;
+}
+
+/* --preloader ---------------------------------------*/
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white url("pictures/reloadCat.gif") no-repeat center;
+    background-size: 50%;
+    z-index: 100;
+}
+
+/* --nav ---------------------------------------*/
+
+#navContainer {
+    position: fixed;
+    background: #ffffff;
+    padding-top: 6vh;
+    height: 15em;
+    width: 100%;
+    float: left;
+    z-index: 1;
+    transition: 0.5s;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+#navColor {
+    position: fixed;
+    background: #FFEACC;
+    top: 0px;
+    left: 0vh;
+    width: 100%;
+    height: 7vh;
+    z-index: 2;
+}
+
+#titleCard {
+    position: fixed;
+    left: 1vh;
+    top: 1vh;
+    width: 14vh;
+    height: 9vh;
+    z-index: 3;
+}
+
+/* Below is the dropdown menu*/
+
+#dropDownBtn {
+    position: fixed;
+    top: 1vh;
+    right: 2vh;
+    transform: scaleX(-1);
+    width: 5vh;
+    height: 5vh;
+    z-index: 3;
+}
+
+#exitBtn {
+    position: fixed;
+    top: 1vh;
+    right: 2vh;
+    width: 5vh;
+    height: 5vh;
+    z-index: 3;
+
+}
+
+.navText {
+    list-style: none;
+    text-decoration: none;
+    font-family: consolas;
+    font-size: 1em;
+    display: block;
+    color: #524f42;
+    list-style-type: none;
+    padding: 2vh;
+    width: 100%;
+    height: 100%;
+}
 
 
-//preloader-----------------------------------------------------
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-    loader.style.display = "none"
-})
 
-//mobile navbar buttons ----------------------------------------
+.gone {
+    display: none;
+}
 
-let dropDownBtn = document.getElementById("dropDownBtn");
+.fadeOut {
+    opacity: 0;
+    transform: translateY(-10%);
 
-dropDownBtn.addEventListener("click", function () {
-    dropDownBtn.classList.add("noDisplay");
+}
 
-    exitBtn.classList.remove("noDisplay");
+.fadeIn {
+    opacity: 1;
+    transform: translateY(10%);
 
-    navContainer.classList.remove("fadeOut");
-    navContainer.classList.add("fadeIn");
-})
+}
 
-exitBtn.addEventListener("click", function () {
-    dropDownBtn.classList.remove("noDisplay");
-
-    exitBtn.classList.add("noDisplay");
-
-    navContainer.classList.remove("fadeIn");
-    navContainer.classList.add("fadeOut");
-
-})
-
-canDoContainer.addEventListener("click", function () {
-    console.log("hello")
-    dropDownBtn.classList.remove("noDisplay");
-
-    exitBtn.classList.add("noDisplay");
-
-    navContainer.classList.remove("fadeIn");
-    navContainer.classList.add("fadeOut");
-
-})
-
-aboutMeContainer2.addEventListener("click", function () {
-    console.log("hello")
-    dropDownBtn.classList.remove("noDisplay");
-
-    exitBtn.classList.add("noDisplay");
-
-    navContainer.classList.remove("fadeIn");
-    navContainer.classList.add("fadeOut");
-
-})
-
-projectHeaderContainer.addEventListener("click", function () {
-    console.log("hello");
-    dropDownBtn.classList.remove("noDisplay");
-
-    exitBtn.classList.add("noDisplay");
-
-    navContainer.classList.remove("fadeIn");
-    navContainer.classList.add("fadeOut");
-
-})
-
-resumeContainer.addEventListener("click", function () {
-    console.log("hello");
-    dropDownBtn.classList.remove("noDisplay");
-
-    exitBtn.classList.add("noDisplay");
-
-    navContainer.classList.remove("fadeIn");
-    navContainer.classList.add("fadeOut");
-
-})
-
-// SWIPER SCRIPT -----------------------------------
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-
-// Displaying project cards -----------------------------------
-project1.classList.add("noDisplay");
-backgroundDimmer.classList.add("noDisplay");
-let project1Screenshot = document.getElementById("project1Screenshot");
-
-project1Screenshot.addEventListener("click", function () {
-
-    project1.classList.remove("noDisplay");
-    backgroundDimmer.classList.remove("noDisplay");
-
-})
-
-let closeProject1Btn = document.getElementById("closeProject1Btn");
-
-closeProject1Btn.addEventListener("click", function () {
-
-    project1.classList.add("noDisplay");
-    backgroundDimmer.classList.add("noDisplay");
-
-})
-
-// Seed Animation -----------------------------------
-
-let plantSmall = document.getElementById("plantSmall");
-let plantMid = document.getElementById("plantMid");
-let plantLarge = document.getElementById("plantLarge");
-let seed = document.getElementById("seed");
-let projectScreenshot = document.getElementById("projectScreenshot");
-
-plantSmall.classList.add("noDisplay");
-plantMid.classList.add("noDisplay");
-plantLarge.classList.add("noDisplay");
-projectScreenshot.classList.add("noDisplay");
-
-seed.addEventListener("click", function h() {
-
-    seed.classList.add("seedAnimate");
-    setTimeout(function () {
-        seed.classList.add("noDisplay");
-        plantSmall.classList.remove("noDisplay");
-
-        setTimeout(function () {
-            plantSmall.classList.add("noDisplay");
-            plantMid.classList.remove("noDisplay");
-
-            setTimeout(function () {
-                plantMid.classList.add("noDisplay");
-                plantLarge.classList.remove("noDisplay");
-                projectScreenshot.classList.remove("noDisplay");
-                projectScreenshot.classList.add("screenShotAnimate");
-            }, 1000);
-        }, 1000);
-
-
-    }, 1500);
+.noDisplay {
+    display: none;
+}
 
 
 
 
+/*--Hero Background---------------------------------------*/
 
-})
+#cottageBackground {
+    margin-top: -2vh;
+    width: 100%;
+    height: 100vh;
+}
 
+#heroHeaderText {
+    position: absolute;
+    top: 25vh;
+    left: auto;
+    text-align: center;
+    font-size: 4em;
+    font-family: consolas;
+    color: white;
+}
+
+#downArrow {
+    position: absolute;
+    top: 78vh;
+    left: 45%;
+    width: 5vh;
+    height: 5vh;
+    animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+
+/*--What I can do section----------------------------------*/
+#canDo {
+    scroll-margin-top: 12vh;
+    margin-top: 10vh;
+    width: 100%;
+    height: 50%;
+}
+
+/*--About Me-----------------------------------------------*/
+
+#portrait {
+    margin-top: 5vh;
+    width: 70%;
+    height: 70%;
+}
+
+#aboutMeContainer {
+    scroll-margin-top: 30vh;
+    position: absolute;
+    border-radius: 15px;
+    left: 53%;
+    top: 150vh;
+    height: 10em;
+    width: 35%;
+    padding: 2vh;
+    background-color: rgb(255, 247, 239);
+}
+
+#aboutMeHeader {
+    font-family: consolas;
+    font-size: 1em;
+    color: #372f26;
+}
+
+#aboutMeText {
+    font-family: consolas;
+    font-size: 0.6em;
+    color: #372f26;
+    padding: 1vh;
+}
+
+#aboutMeContactBtn {
+    background-color: #827c5c;
+    font-family: consolas;
+    font-size: 0.7em;
+    height: 4vh;
+    width: 12vh;
+    color: #ffffff;
+    float: right;
+    padding: 0.5vh;
+    border-radius: 2vh;
+}
+
+/*--Project Section-----------------------------------------------*/
+
+#projectHeader {
+    scroll-margin-top: 10vh;
+    margin-top: 10vh;
+    margin-left: 5vh;
+    height: 20%;
+    width: 80%;
+}
+
+.projectCard {
+    height: 60%;
+    width: 80%;
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+
+.projectInfoContainer {
+    position: fixed;
+    top: 20vh;
+    left: 5%;
+    width: 70%;
+    height: 60vh;
+    background-color: rgb(255, 247, 239);
+    opacity: 0.9;
+    border-radius: 15px;
+    padding: 10%;
+    z-index: 5;
+
+}
+
+.projectInfoHeader {
+    font-family: consolas;
+    font-size: 3.5em;
+    color: #372f26;
+
+}
+
+.projectInfoText {
+    margin-top: 1em;
+    color: #372f26;
+    font-family: consolas;
+}
+
+.swiperContainer {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    width: 70%;
+    height: 70%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: #141b14;
+    background: rgba(50, 53, 44, 0.6);
+
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #141b14;
+}
+
+#closeProject1Btn {
+    position: fixed;
+    top: 26vh;
+    right: 5vh;
+    width: 10%;
+    height: 5%;
+    z-index: 6;
+}
+
+
+
+#projectElements {
+    position: absolute;
+    margin-top: 60vh;
+    width: 100%;
+}
+
+#soil {
+    position: relative;
+
+    left: 0%;
+    width: 100%;
+    height: 40vh;
+    z-index: 1;
+}
+
+#seed {
+    position: absolute;
+    left: 45%;
+
+    bottom: 150%;
+    width: 10%;
+    height: 10%;
+    z-index: 2;
+
+}
+
+.seedAnimate {
+    animation: plantIt 1.3s forwards;
+}
+
+@keyframes plantIt {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    8% {
+        transform: translateY(-2vh)
+    }
+
+    100% {
+        transform: translateY(35vh);
+
+    }
+}
+
+
+#plantSmall {
+    position: absolute;
+    left: 35%;
+    bottom: 60%;
+    width: 35%;
+    height: 15vh;
+    z-index: 2;
+}
+
+#plantMid {
+
+    position: absolute;
+    left: 33%;
+    bottom: 60%;
+
+    width: 35%;
+    height: 60%;
+    z-index: 2;
+}
+
+#plantLarge {
+
+    position: absolute;
+    left: 3%;
+    bottom: 55%;
+
+    width: 90%;
+    height: 60vh;
+    z-index: 2;
+}
+
+.projectScreenshot {
+    opacity: 0%;
+    position: absolute;
+    left: 22.5%;
+    right: 22.5%;
+    bottom: 140%;
+
+    width: 55%;
+    height: 18vh;
+    z-index: 3;
+
+    transform: translateY(2vh);
+}
+
+
+.screenShotAnimate {
+    animation: screenShotAnimate 1.3s forwards;
+}
+
+@keyframes screenShotAnimate {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(-2vh);
+
+    }
+}
+
+.projectTitleContainer {
+    margin-top: 10vh;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+
+    background-color: rgb(255, 247, 239);
+    border-radius: 15px;
+    padding: 5%;
+}
+
+.projectNameText {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: consolas;
+    z-index: 3;
+
+}
+
+.projectSubnameText {
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 0.6em;
+    font-family: consolas;
+    z-index: 3;
+}
+
+/*PROJECT SLIDERS----------*/
+
+#sliderWrapper {
+    position: relative;
+    max-width: 55%;
+}
+
+#slider {
+    display: flex;
+    overflow-x: auto;
+}
